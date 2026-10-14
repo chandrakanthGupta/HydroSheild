@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+google-genai
+pymongo
+certifi
+python-dotenv
+requests
+twilio
+pydantic
+scikit-learn
+numpy

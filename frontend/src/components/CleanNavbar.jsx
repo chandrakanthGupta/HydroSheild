@@ -51,9 +51,10 @@ export default function CleanNavbar({
         </div>
 
         {/* Platform Mode Switcher */}
-        <nav className="flex items-center gap-1 p-1 rounded-xl bg-slate-900 border border-slate-800 self-stretch xl:self-auto overflow-x-auto text-xs font-semibold">
+        <nav role="navigation" aria-label="Disaster Intelligence Mode Switcher" className="flex items-center gap-1 p-1 rounded-xl bg-slate-900 border border-slate-800 self-stretch xl:self-auto overflow-x-auto text-xs font-semibold">
           <button
             onClick={() => setActiveMode('live')}
+            aria-label="Switch to live flood telemetry monitoring"
             className={`px-3 py-1.5 rounded-lg transition whitespace-nowrap flex items-center gap-1.5 ${
               activeMode === 'live'
                 ? 'bg-blue-600 text-white shadow-sm'
@@ -71,6 +72,7 @@ export default function CleanNavbar({
 
           <button
             onClick={() => setActiveMode('nepal')}
+            aria-label="Switch to 2024 Nepal flood historical disaster explorer"
             className={`px-3 py-1.5 rounded-lg transition whitespace-nowrap flex items-center gap-1.5 ${
               activeMode === 'nepal'
                 ? 'bg-blue-600 text-white shadow-sm'
@@ -83,6 +85,7 @@ export default function CleanNavbar({
 
           <button
             onClick={() => setActiveMode('satellite')}
+            aria-label="Switch to satellite radar and hazard footprint view"
             className={`px-3 py-1.5 rounded-lg transition whitespace-nowrap flex items-center gap-1.5 ${
               activeMode === 'satellite'
                 ? 'bg-blue-600 text-white shadow-sm'
@@ -95,6 +98,7 @@ export default function CleanNavbar({
 
           <button
             onClick={() => setActiveMode('rescue')}
+            aria-label="Switch to rescue operations and safe shelter prioritization"
             className={`px-3 py-1.5 rounded-lg transition whitespace-nowrap flex items-center gap-1.5 ${
               activeMode === 'rescue'
                 ? 'bg-blue-600 text-white shadow-sm'
@@ -107,10 +111,11 @@ export default function CleanNavbar({
         </nav>
 
         {/* Global Controls & Actions */}
-        <div className="flex items-center gap-2 self-end xl:self-auto">
+        <div role="toolbar" aria-label="Global Emergency Controls" className="flex items-center gap-2 self-end xl:self-auto">
           {/* Geolocation Button */}
           <button
             onClick={onOpenGPSModal}
+            aria-label="View or update GPS coordinates"
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium border transition ${
               userLocation
                 ? 'bg-sky-500/20 text-sky-300 border-sky-500/40'
@@ -125,6 +130,7 @@ export default function CleanNavbar({
           {/* Twilio SMS/WhatsApp Gateway */}
           <button
             onClick={onOpenAlertsModal}
+            aria-label="Open emergency Twilio alert dispatch gateway"
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700 transition"
             title="Twilio Alert Dispatches"
           >
@@ -135,6 +141,7 @@ export default function CleanNavbar({
           {/* Cloudburst Simulation */}
           <button
             onClick={onOpenCloudburst}
+            aria-label="Trigger simulated cloudburst storm surge"
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-red-500/15 hover:bg-red-500/25 text-red-300 border border-red-500/30 transition shadow-sm"
           >
             <Zap className="w-3.5 h-3.5 text-red-400" />
@@ -144,6 +151,7 @@ export default function CleanNavbar({
           {/* Gemini AI Protocol */}
           <button
             onClick={onOpenAIPlan}
+            aria-label="Generate Google Gemini AI emergency action plan"
             className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white shadow-md shadow-blue-600/30 transition"
           >
             <Sparkles className="w-3.5 h-3.5" />

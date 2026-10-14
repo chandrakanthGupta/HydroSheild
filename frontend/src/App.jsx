@@ -444,7 +444,7 @@ export default function App() {
       />
 
       {/* Main Unified Viewport */}
-      <main className="flex-1 max-w-[1720px] w-full mx-auto px-4 sm:px-6 py-5 flex flex-col gap-5">
+      <main role="main" aria-label="Urban Flood Disaster Command and Control Center" className="flex-1 max-w-[1720px] w-full mx-auto px-4 sm:px-6 py-5 flex flex-col gap-5">
         {/* Top 4 KPI Metrics */}
         <MetricCards nodes={nodes} weatherData={weatherData} />
 

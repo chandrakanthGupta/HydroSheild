@@ -21,7 +21,7 @@ export default function MetricCards({ nodes, weatherData }) {
   const isRiskMed = mlRiskPct >= 40 && mlRiskPct < 70;
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+    <div role="region" aria-label="Key Flood Performance Indicators" aria-live="polite" className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
       {/* 1. Overall Risk */}
       <div className="p-4 rounded-xl bg-[#0f172a] border border-slate-800 shadow-sm flex flex-col justify-between">
         <div className="flex items-center justify-between text-xs text-slate-400 font-medium">

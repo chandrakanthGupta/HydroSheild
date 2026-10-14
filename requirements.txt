@@ -9,3 +9,5 @@ twilio
 pydantic
 scikit-learn
 numpy
+pytest
+httpx

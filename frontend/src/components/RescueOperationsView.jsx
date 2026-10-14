@@ -159,6 +159,7 @@ export default function RescueOperationsView({
                 </div>
                 <button
                   onClick={() => onDispatchAlert(sec)}
+                  aria-label={`Dispatch emergency alert for sector ${sec.name}`}
                   className="px-3 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white text-xs font-semibold transition shrink-0 flex items-center gap-1.5"
                 >
                   <PhoneCall className="w-3.5 h-3.5" /> Alert First Responders

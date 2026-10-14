@@ -165,6 +165,7 @@ export default function FloodMap({
           {/* Toggle Evacuation Routes */}
           <button
             onClick={() => setShowRoutes(!showRoutes)}
+            aria-label="Toggle evacuation routes on map"
             className={`px-2.5 py-1 rounded-lg font-medium transition flex items-center gap-1.5 ${
               showRoutes ? 'bg-blue-600/20 text-blue-300 border border-blue-500/30' : 'text-slate-400 hover:text-white'
             }`}
@@ -177,6 +178,7 @@ export default function FloodMap({
           {floodPolygons && floodPolygons.length > 0 && (
             <button
               onClick={() => setShowSatFootprint(!showSatFootprint)}
+              aria-label="Toggle SAR radar satellite flood footprint overlay"
               className={`px-2.5 py-1 rounded-lg font-medium transition flex items-center gap-1.5 ${
                 showSatFootprint ? 'bg-cyan-600/20 text-cyan-300 border border-cyan-500/30' : 'text-slate-400 hover:text-white'
               }`}
@@ -194,6 +196,7 @@ export default function FloodMap({
               onClick={() => {
                 if (onRequestGPS) onRequestGPS();
               }}
+              aria-label="Center map on user GPS coordinates"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sky-500/20 text-sky-300 border border-sky-500/40 text-xs font-semibold backdrop-blur-md shadow-md"
               title="Center on My GPS Location"
             >
@@ -203,6 +206,7 @@ export default function FloodMap({
           ) : (
             <button
               onClick={onOpenGPSModal}
+              aria-label="Acquire browser GPS location"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-slate-700 text-xs font-semibold backdrop-blur-md shadow-md transition"
             >
               <MapPin className="w-3.5 h-3.5 text-blue-400" />
